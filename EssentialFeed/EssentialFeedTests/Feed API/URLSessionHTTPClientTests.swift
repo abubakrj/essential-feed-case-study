@@ -39,7 +39,7 @@ class URLSessionHTTPClientTests: XCTestCase {
             exp.fulfill()
         }
 
-        URLSessionHTTPClient().get(from: url) { _ in }
+        makeSUT().get(from: url) { _ in }
 
         wait(for: [exp], timeout: 0.5)
     }
@@ -49,11 +49,9 @@ class URLSessionHTTPClientTests: XCTestCase {
         let error = NSError(domain: "any error", code: 1)
         URLProtocolStub.stub(data: nil, response: nil, error: error)
 
-        let sut = URLSessionHTTPClient()
-
         let exp = expectation(description: "Wait for completion")
 
-        sut.get(from: url) { result in
+        makeSUT().get(from: url) { result in
             switch result {
             case let .failure(receivedError as NSError):
                 XCTAssertEqual(receivedError.localizedDescription, error.localizedDescription)
@@ -69,6 +67,26 @@ class URLSessionHTTPClientTests: XCTestCase {
     }
 
     // MARK: - Helpers
+
+    private func makeSUT(file: StaticString = #filePath,
+                         line: UInt = #line) -> URLSessionHTTPClient {
+        let sut = URLSessionHTTPClient()
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return sut
+    }
+
+    private func trackForMemoryLeaks(_ instance: AnyObject,
+                                     file: StaticString = #filePath,
+                                     line: UInt = #line) {
+        addTeardownBlock { [weak instance] in
+            XCTAssertNil(
+                instance,
+                "Instance should have been deallocate. Potential memory weak",
+                file: file,
+                line: line
+            )
+        }
+    }
 
     private class URLProtocolStub: URLProtocol {
         private static var stub: Stub?
