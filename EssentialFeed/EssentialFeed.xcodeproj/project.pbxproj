@@ -28,6 +28,7 @@
 		E5C3F416298FA7060051B1DB /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C3F415298FA7060051B1DB /* URLSessionHTTPClientTests.swift */; };
 		E5CABCF52993EDDC000EB8FD /* LoadFeedFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CABCF42993EDDC000EB8FD /* LoadFeedFromCacheUseCaseTests.swift */; };
 		E5CABCF72993EF3B000EB8FD /* FeedStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CABCF62993EF3B000EB8FD /* FeedStoreSpy.swift */; };
+		E5CABCFA29940A16000EB8FD /* ValidateFeedCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CABCF929940A16000EB8FD /* ValidateFeedCacheUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		E5C3F415298FA7060051B1DB /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		E5CABCF42993EDDC000EB8FD /* LoadFeedFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		E5CABCF62993EF3B000EB8FD /* FeedStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpy.swift; sourceTree = "<group>"; };
+		E5CABCF929940A16000EB8FD /* ValidateFeedCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateFeedCacheUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				E5CABCF82993EF3F000EB8FD /* Helpers */,
 				E57331A52992AA9600F3BF9F /* CacheFeedUseCaseTests.swift */,
 				E5CABCF42993EDDC000EB8FD /* LoadFeedFromCacheUseCaseTests.swift */,
+				E5CABCF929940A16000EB8FD /* ValidateFeedCacheUseCaseTests.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5CABCFA29940A16000EB8FD /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				E5C3F409298EAE130051B1DB /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				E57331902992261B00F3BF9F /* XCTestCase+MemoryLeakTrackingHelper.swift in Sources */,
 				E5CABCF72993EF3B000EB8FD /* FeedStoreSpy.swift in Sources */,
