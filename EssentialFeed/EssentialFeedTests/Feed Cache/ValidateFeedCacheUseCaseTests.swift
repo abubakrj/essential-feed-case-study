@@ -1,3 +1,7 @@
+//
+//  Copyright © 2019 Essential Developer. All rights reserved.
+//
+
 import XCTest
 import EssentialFeed
 
@@ -84,5 +88,4 @@ class ValidateFeedCacheUseCaseTests: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, store)
     }
-
 }
