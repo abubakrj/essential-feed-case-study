@@ -176,9 +176,9 @@
 		E5C3F40D298EAF490051B1DB /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
-				E5C3F40E298EAF590051B1DB /* RemoteFeedLoader.swift */,
-				E5C3F410298F90F50051B1DB /* HTTPClient.swift */,
 				E5C3F412298F91280051B1DB /* FeedItemsMapper.swift */,
+				E5C3F410298F90F50051B1DB /* HTTPClient.swift */,
+				E5C3F40E298EAF590051B1DB /* RemoteFeedLoader.swift */,
 				E573319129922DF800F3BF9F /* URLSessionHTTPClient.swift */,
 			);
 			path = "Feed API";
