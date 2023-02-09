@@ -3,8 +3,17 @@ import EssentialFeed
 
 class CodableFeedStore {
     private struct Cache: Codable {
-        let feed: [LocalFeedImage]
+        let feed: [CodableFeedImage]
         let timestamp: Date
+
+        
+    }
+
+    private struct CodableFeedImage: Codable {
+        private let id: UUID
+        private let description: String?
+        private let location: String?
+        private let url: URL
     }
 
     private let storeURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("image-feed.store")
